@@ -9,7 +9,7 @@ async function main() {
   console.log('Deployed Token at: ', hiveToken.address)
 
   const ICO = await ethers.getContractFactory('ICO')
-  const ico = await ICO.deploy(7, hiveToken.address)
+  const ico = await ICO.deploy(hiveToken.address, hiveToken.address)
 
   console.log('Deployed ICO at address ', ico.address)
 }
